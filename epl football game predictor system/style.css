@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   background-color: #E8F0FE;
+  }
+  
+  header {
+    background-color: #817e7e;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 10px;
+    margin-right: 20px;
+    padding: 30px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .login-register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: #ccc;
+    margin-right: 5px;
+  }
+  
+  .login-form, .register-form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .login-form h5
+  {
+margin-left: 80px;
+  }
+  .login-form h6
+  {
+margin-left: 40px;
+cursor: pointer;
+
+  }
+  .login-form h6 a
+  {
+    text-decoration: none;
+    color: green;
+  }
+  .login-form h2, .register-form h2 {
+    margin-top: 0;
+  }
+  
+  .login-form input, .register-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+  .login-form button, .register-form button {
+    width: 60%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 30px;
+  }
+  
+  .login-form button:hover, .register-form button:hover {
+    background-color: #555;
+  }
+  
