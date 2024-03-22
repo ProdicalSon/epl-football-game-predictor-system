@@ -10,8 +10,8 @@ from sklearn.neighbors import KNeighborsRegressor # low values
 import math
 
 # read dataset
-url = "/reported_numbers.csv"
-df = pd.read_csv('files/malaria.csv')
+#url = "/PremierLeague.csv"
+df = pd.read_csv('\files\PremierLeague.csv')
 
 # Display the first few rows of the dataset
 df.head(10)
@@ -22,8 +22,8 @@ df.head(10)
 df = df.dropna()
 
 # Split the data into features (X) and target variable (y)
-X = df[['Year', 'No. of cases']]  #these are features
-y = df['No. of cases']  # Replace 'target_variable' with your actual target variable
+X = df[['FullTimeHomeTeamGoals', 'FullTimeAwayTeamGoals']]  #these are features
+y = df['FullTimeAwayTeamGoals']  # Replace 'target_variable' with your actual target variable
 
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -40,7 +40,7 @@ predictions = model.predict(X_test)
 mae = mean_absolute_error(y_test, predictions)
 # print(f'Neural Network Mean Absolute Error: {mae}')
 # Provide new data (e.g., the year 2030) for prediction
-new_data = pd.DataFrame({'Year': [2030], 'No. of cases': [300]})
+new_data = pd.DataFrame({'FullTimeHomeTeamGoals': [2024], 'FullTimeAwayTeamGoals': [300]})
 
 # Use the trained model to predict the number of cases for the given year
 prediction = round(model.predict(new_data)[0])
