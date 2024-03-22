@@ -28,7 +28,7 @@
         <input type="password" placeholder="Password">
         <button type="submit">Login</button>
         <h5>or</h5>
-        <h6> <a href="register.html">Register here</a></h6>
+        <h6> <a href="register.php">Register here</a></h6>
       </form>
     </div>
   </section>
