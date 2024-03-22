@@ -31,5 +31,41 @@
           </form>
         </div>
       </section>
+
+
+
+      <?php
+include "conn.php";
+
+if(isset($_POST['submit'])){
+
+// Check connection
+if (!$connection) {
+die("Connection failed: " . mysqli_connect_error());
+}else{
+// Retrieve form data
+$username = $_POST['username'];
+$email = $_POST['email'];
+$phoenumber = $_POST['phoenumber'];
+$passwordd = $_POST['passwordd'];
+
+
+// Prepare SQL statement
+$sql = "INSERT INTO premier_register_data(username, email, phonenumber,passwordd) VALUES (?,?,?,?)";
+$stmt = mysqli_prepare($connection, $sql);
+mysqli_stmt_bind_param($stmt, "ssss", $username, $email, $phonenumber,$passwordd);
+
+// Execute prepared statement
+mysqli_stmt_execute($stmt);
+
+
+echo "uploaded seccessifully";
+// Close prepared statement and database connection
+mysqli_stmt_close($stmt);
+mysqli_close($connection);
+}
+}
+
+?>
 </body>
 </html>
